@@ -36,13 +36,17 @@ Annotate UI elements directly in any web app running in Chrome. Produces structu
 
 ## Integration with AI Coding Agents
 
-The downloaded JSON file contains structured annotation data (selectors, computed CSS, element HTML, screenshots) ready for AI consumption:
+The annotation file contains structured data (selectors, computed CSS, element HTML, screenshots) ready for AI consumption. Install the [Redline skill](https://seedr.toolr.dev/skills/redline) to enable the `/redline` slash command in Claude Code:
+
+```bash
+npx @toolr/seedr add redline --type skill
+```
+
+Then pass the downloaded annotation file to your coding agent:
 
 ```
 /redline home-2026-03-11-14-30.json
 ```
-
-A `SKILL.md` is included for Claude Code integration. Copy it to your project's `.claude/skills/redline/SKILL.md` to enable the `/redline` slash command.
 
 ## Keyboard Shortcuts
 
