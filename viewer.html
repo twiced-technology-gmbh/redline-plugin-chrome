@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redline Viewer</title>
+  <link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-left">
+        <img src="icons/icon-48.png" alt="" class="logo">
+        <h1>Redline Viewer</h1>
+      </div>
+      <div class="header-right">
+        <div class="header-meta" id="fileMeta"></div>
+        <button class="new-btn" id="newBtn" hidden>New</button>
+      </div>
+    </header>
+
+    <div class="drop-zone" id="dropZone">
+      <div class="drop-zone-content">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="17 8 12 3 7 8"/>
+          <line x1="12" y1="3" x2="12" y2="15"/>
+        </svg>
+        <p>Drop a redline JSON file here</p>
+        <span>or</span>
+        <label class="file-btn">
+          Browse files
+          <input type="file" accept=".json" id="fileInput" hidden>
+        </label>
+      </div>
+    </div>
+
+    <div class="viewer" id="viewer" hidden>
+      <div class="tabs">
+        <button class="tab active" data-tab="screenshot">Screenshot</button>
+        <button class="tab" data-tab="annotations">Annotations</button>
+        <button class="tab" data-tab="json">Raw JSON</button>
+      </div>
+
+      <div class="tab-panel active" id="panel-screenshot">
+        <div class="screenshot-container" id="screenshotContainer">
+          <img id="screenshotImg" alt="Screenshot">
+          <!-- Annotation markers are injected here -->
+        </div>
+      </div>
+
+      <div class="tab-panel" id="panel-annotations">
+        <div id="annotationsList"></div>
+      </div>
+
+      <div class="tab-panel" id="panel-json">
+        <pre id="jsonOutput"></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <img id="lightboxImg" alt="Fullscreen screenshot">
+  </div>
+
+  <script src="viewer.js"></script>
+</body>
+</html>
