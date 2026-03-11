@@ -1,5 +1,8 @@
 # Redline — UI Annotation Chrome Extension
 
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/egdjiaglidnecgjbddcbdboffbhdlgdn.svg)](https://chromewebstore.google.com/detail/egdjiaglidnecgjbddcbdboffbhdlgdn)
+[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Annotate UI elements directly in any web app running in Chrome. Produces structured JSON annotation files designed for consumption by AI coding agents like Claude Code.
 
 ![Annotating a web app — select elements, draw arrows and shapes, add comments describing what needs to change](assets/annotation.png)
@@ -17,6 +20,10 @@ Annotate UI elements directly in any web app running in Chrome. Produces structu
 - **Viewer** — built-in annotation file viewer with screenshot compositing
 
 ## Installation
+
+### Chrome Web Store
+
+Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/egdjiaglidnecgjbddcbdboffbhdlgdn) and pin the extension icon for quick access.
 
 ### From Source (Developer Mode)
 
