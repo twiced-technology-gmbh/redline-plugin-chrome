@@ -2,6 +2,10 @@
 
 Annotate UI elements directly in any web app running in Chrome. Produces structured JSON annotation files designed for consumption by AI coding agents like Claude Code.
 
+![Annotating a web app — select elements, draw arrows and shapes, add comments describing what needs to change](assets/annotation.png)
+
+![Built-in viewer — review annotations with composited screenshots and structured JSON output](assets/viewer.png)
+
 ## Features
 
 - **Select** elements to annotate with comments
